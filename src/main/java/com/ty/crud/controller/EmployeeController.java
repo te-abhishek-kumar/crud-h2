@@ -26,13 +26,11 @@ public class EmployeeController {
 
 	private final EmployeeService service;
 
-	@Validated
 	@PostMapping("/add-employee")
 	public ResponseEntity<EmployeeResponse> addEmployee(@NotNull @Valid @RequestBody EmployeeRequest request) {
 		return ResponseEntity.ok(service.addEmployee(request));
 	}
 
-	@Validated
 	@GetMapping("/find-employee")
 	public ResponseEntity<Response> findEmployee(@NotNull @RequestHeader String username) {
 		return ResponseEntity.ok(service.findEmployee(username));
