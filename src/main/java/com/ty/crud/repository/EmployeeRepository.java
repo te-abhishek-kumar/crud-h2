@@ -10,4 +10,6 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
 	Optional<Employee> findByUsername(String username);
 
+	Optional<Employee> findByMobile(Long mobile);
+
 }
